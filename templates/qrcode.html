@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>QR Code - ScamCoup</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+
+<nav>
+
+<div class="logo">
+
+🛡️ ScamCoup
+
+</div>
+
+
+<div>
+
+<a href="/">Início</a>
+
+<a href="/analisar">Mensagem</a>
+
+<a href="/link">Link</a>
+
+<a href="/qrcode">QR Code</a>
+
+<a href="/historico">Histórico</a>
+
+</div>
+
+</nav>
+
+
+<main>
+
+
+<div class="painel">
+
+
+<h1>
+📷 Analisar QR Code
+</h1>
+
+
+<p>
+
+Envie uma imagem contendo um QR Code.
+
+</p>
+
+
+{% if erro %}
+
+<div class="erro">
+
+⚠️ {{ erro }}
+
+</div>
+
+{% endif %}
+
+
+<form
+method="POST"
+enctype="multipart/form-data">
+
+
+<input
+type="file"
+name="arquivo"
+accept=".png,.jpg,.jpeg,.webp"
+required>
+
+
+<br><br>
+
+
+<button type="submit">
+
+🔍 Analisar QR Code
+
+</button>
+
+
+</form>
+
+
+</div>
+
+
+</main>
+
+
+</body>
+
+</html>

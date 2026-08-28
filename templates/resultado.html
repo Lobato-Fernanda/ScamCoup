@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Resultado - ScamCoup</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">
+        🛡️ ScamCoup
+    </div>
+
+    <div>
+        <a href="/">Início</a>
+        <a href="/analisar">Analisar</a>
+        <a href="/historico">Histórico</a>
+    </div>
+
+</nav>
+
+
+<main>
+
+    <div class="resultado">
+
+        <h1>
+            Resultado da análise
+        </h1>
+
+
+        <div class="score">
+
+            {{ score }}
+
+            <small>/100</small>
+
+        </div>
+
+
+        <h2>
+            Risco {{ nivel }}
+        </h2>
+
+
+        <div class="barra">
+
+            <div
+                class="progresso"
+                style="width: {{ score }}%;">
+            </div>
+
+        </div>
+
+
+        <h3>
+            🔎 O que encontramos
+        </h3>
+        <h3>
+🎯 Tipo provável de golpe
+</h3>
+
+<ul>
+
+{% for categoria in categorias %}
+
+<li>
+
+{{ categoria }}
+
+</li>
+
+{% endfor %}
+
+</ul>
+
+        <ul>
+
+            {% for motivo in motivos %}
+
+            <li>
+                {{ motivo }}
+            </li>
+
+            {% endfor %}
+
+        </ul>
+
+
+        <div class="mensagem-original">
+
+            <h3>
+                Mensagem analisada
+            </h3>
+
+            <p>
+                {{ mensagem }}
+            </p>
+
+        </div>
+
+
+        <div class="recomendacao">
+
+            <h3>
+                🛡️ Recomendação ScamCoup
+            </h3>
+
+            {% if score >= 51 %}
+
+                <p>
+                    Não clique em links, não realize pagamentos
+                    e não forneça informações pessoais antes
+                    de confirmar a autenticidade da mensagem
+                    pelos canais oficiais.
+                </p>
+
+            {% else %}
+
+                <p>
+                    Foram encontrados poucos sinais de risco,
+                    mas mantenha atenção antes de fornecer dados
+                    ou acessar links.
+                </p>
+
+            {% endif %}
+
+        </div>
+
+
+        <a href="/analisar"
+           class="botao">
+
+            Analisar outra mensagem
+
+        </a>
+
+    </div>
+
+</main>
+
+</body>
+
+</html>

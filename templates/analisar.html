@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Analisar mensagem - ScamCoup</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">
+        🛡️ScamCoup
+    </div>
+
+    <div>
+        <a href="/">Início</a>
+        <a href="/analisar">Analisar</a>
+        <a href="/historico">Histórico</a>
+    </div>
+
+</nav>
+
+
+<main>
+
+    <div class="painel">
+
+        <h1>
+            Analisar mensagem
+        </h1>
+
+        <p>
+            Cole abaixo a mensagem que você considera suspeita.
+        </p>
+
+
+        <form method="POST">
+
+            <textarea
+                name="mensagem"
+                placeholder="Cole aqui a mensagem recebida..."
+                required>
+            </textarea>
+
+
+            <button type="submit">
+                🛡️ Verificar mensagem
+            </button>
+
+        </form>
+
+    </div>
+
+</main>
+
+</body>
+
+</html>

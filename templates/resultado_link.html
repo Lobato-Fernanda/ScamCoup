@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Resultado - ScamCoup</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+🛡️ ScamCoup
+</div>
+
+<div>
+
+<a href="/">Início</a>
+
+<a href="/analisar">Mensagem</a>
+
+<a href="/link">Link</a>
+
+<a href="/qrcode">QR Code</a>
+
+<a href="/historico">Histórico</a>
+
+</div>
+
+</nav>
+
+
+<main>
+
+<div class="resultado">
+
+<h1>
+Resultado da análise do link
+</h1>
+
+
+<div class="score">
+
+{{ score }}
+
+<small>/100</small>
+
+</div>
+
+
+<h2>
+Risco {{ nivel }}
+</h2>
+
+
+<div class="barra">
+
+<div
+class="progresso"
+style="width: {{ score }}%;">
+</div>
+
+</div>
+
+
+<h3>
+🌐 Domínio identificado
+</h3>
+
+<p>
+
+{{ dominio }}
+
+</p>
+
+
+<h3>
+⚠️ Indicadores encontrados
+</h3>
+
+
+<ul>
+
+{% for motivo in motivos %}
+
+<li>
+
+{{ motivo }}
+
+</li>
+
+{% endfor %}
+
+</ul>
+
+
+<div class="mensagem-original">
+
+<h3>
+Link analisado
+</h3>
+
+<p>
+
+{{ url }}
+
+</p>
+
+</div>
+
+
+<div class="recomendacao">
+
+<h3>
+🛡️ Recomendação
+</h3>
+
+{% if score >= 51 %}
+
+<p>
+Evite acessar este endereço diretamente.
+Confirme a informação utilizando o site ou aplicativo oficial da instituição.
+</p>
+
+{% else %}
+
+<p>
+Foram encontrados poucos indicadores estruturais suspeitos, mas isso não garante que o endereço seja seguro.
+</p>
+
+{% endif %}
+
+</div>
+
+
+<a
+href="/link"
+class="botao">
+
+Analisar outro link
+
+</a>
+
+</div>
+
+</main>
+
+</body>
+
+</html>
