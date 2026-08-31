@@ -15,230 +15,269 @@
 
 <body>
 
-    <!-- MENU SUPERIOR -->
-    <nav>
+    <header class="topo">
 
-        <div class="logo">
-            🛡️ScamCoup
+        <div class="marca">
+            <div class="icone-marca">🛡️</div>
+
+            <div>
+                <h1>ScamCoup</h1>
+                <p>Ajuda contra golpes digitais</p>
+            </div>
         </div>
 
-        <div class="menu">
+        <a href="/historico"
+           class="botao-historico">
+            🕘 Minhas verificações
+        </a>
 
-            <a href="/">
-                Início
-            </a>
-
-            <a href="/analisar">
-                Mensagem
-            </a>
-
-            <a href="/link">
-                Link
-            </a>
-
-            <a href="/qrcode">
-                QR Code
-            </a>
-
-            <a href="/historico">
-                Histórico
-            </a>
-
-        </div>
-
-    </nav>
+    </header>
 
 
-    <!-- CONTEÚDO PRINCIPAL -->
-    <main class="inicio">
+    <main>
 
-        <section class="hero">
+        <section class="inicio-acessivel">
 
-            <div class="badge">
-                🛡️ Segurança digital ao seu alcance
-            </div>
+            <div class="texto-inicial">
 
-            <h1>
-                Proteja-se contra
-                <span>golpes digitais</span>
-            </h1>
+                <span class="selo-seguranca">
+                    🛡️ Verifique antes de clicar ou pagar
+                </span>
 
-            <p>
-                Analise mensagens, links e QR Codes suspeitos.
-                O ScamCoup identifica possíveis sinais de fraude,
-                calcula o nível de risco e explica como você pode
-                se proteger.
-            </p>
+                <h2>
+                    Está em dúvida se uma mensagem
+                    pode ser um golpe?
+                </h2>
 
+                <p class="descricao-principal">
+                    O ScamCoup ajuda você a verificar mensagens,
+                    links e QR Codes suspeitos de forma simples.
+                </p>
 
-            <div class="botoes-hero">
+                <div class="aviso-principal">
 
-                <a href="/analisar"
-                   class="botao">
+                    <div class="icone-aviso">
+                        ⚠️
+                    </div>
 
-                    🔍 Analisar mensagem
+                    <div>
+                        <strong>
+                            Está com dúvida?
+                        </strong>
 
-                </a>
+                        <p>
+                            Não clique em links, não faça pagamentos
+                            e não informe seus dados antes de verificar.
+                        </p>
+                    </div>
 
-                <a href="/link"
-                   class="botao-secundario">
-
-                    🔗 Verificar link
-
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <!-- FERRAMENTAS -->
-        <section class="titulo-secao">
-
-            <h2>
-                Como o ScamCoup pode ajudar?
-            </h2>
-
-            <p>
-                Escolha uma ferramenta para iniciar sua análise.
-            </p>
-
-        </section>
-
-
-        <section class="recursos">
-
-
-            <a href="/analisar"
-               class="card card-link">
-
-                <div class="icone-card">
-                    💬
                 </div>
 
+            </div>
+
+
+            <section class="escolha">
+
                 <h3>
-                    Análise de mensagens
+                    O que você recebeu?
                 </h3>
 
                 <p>
-                    Identifique linguagem de urgência,
-                    solicitações de pagamento, roubo de
-                    credenciais e outros padrões comuns
-                    de engenharia social.
+                    Escolha uma opção abaixo.
                 </p>
 
-                <span class="acao-card">
-                    Analisar mensagem →
-                </span>
 
-            </a>
+                <div class="opcoes-principais">
 
 
-            <a href="/link"
-               class="card card-link">
+                    <!-- MENSAGEM -->
 
-                <div class="icone-card">
-                    🔗
+                    <a href="/analisar"
+                       class="opcao-grande">
+
+                        <div class="icone-opcao">
+                            💬
+                        </div>
+
+                        <div class="conteudo-opcao">
+
+                            <h4>
+                                Uma mensagem
+                            </h4>
+
+                            <p>
+                                WhatsApp, SMS ou e-mail
+                            </p>
+
+                        </div>
+
+                        <div class="seta-opcao">
+                            →
+                        </div>
+
+                    </a>
+
+
+                    <!-- LINK -->
+
+                    <a href="/link"
+                       class="opcao-grande">
+
+                        <div class="icone-opcao">
+                            🔗
+                        </div>
+
+                        <div class="conteudo-opcao">
+
+                            <h4>
+                                Um link
+                            </h4>
+
+                            <p>
+                                Um endereço de site que você recebeu
+                            </p>
+
+                        </div>
+
+                        <div class="seta-opcao">
+                            →
+                        </div>
+
+                    </a>
+
+
+                    <!-- QR CODE -->
+
+                    <a href="/qrcode"
+                       class="opcao-grande">
+
+                        <div class="icone-opcao">
+                            📷
+                        </div>
+
+                        <div class="conteudo-opcao">
+
+                            <h4>
+                                Um QR Code
+                            </h4>
+
+                            <p>
+                                Uma imagem ou código que você recebeu
+                            </p>
+
+                        </div>
+
+                        <div class="seta-opcao">
+                            →
+                        </div>
+
+                    </a>
+
+
                 </div>
 
+            </section>
+
+
+            <section class="como-funciona">
+
                 <h3>
-                    Análise de links
+                    Como funciona?
                 </h3>
 
-                <p>
-                    Verifique características suspeitas
-                    em endereços antes de acessar
-                    páginas desconhecidas.
-                </p>
 
-                <span class="acao-card">
-                    Verificar link →
-                </span>
-
-            </a>
+                <div class="passos">
 
 
-            <a href="/qrcode"
-               class="card card-link">
+                    <div class="passo">
 
-                <div class="icone-card">
-                    ▦
+                        <div class="numero-passo">
+                            1
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Escolha o que deseja verificar
+                            </strong>
+
+                            <p>
+                                Mensagem, link ou QR Code.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="passo">
+
+                        <div class="numero-passo">
+                            2
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Envie o conteúdo
+                            </strong>
+
+                            <p>
+                                Cole a mensagem, o link ou envie a imagem.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="passo">
+
+                        <div class="numero-passo">
+                            3
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Veja nossa orientação
+                            </strong>
+
+                            <p>
+                                Mostramos os sinais encontrados
+                                e o que você deve fazer.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
                 </div>
 
-                <h3>
-                    Análise de QR Code
-                </h3>
-
-                <p>
-                    Envie uma imagem de QR Code para
-                    descobrir seu conteúdo e analisar
-                    possíveis links perigosos.
-                </p>
-
-                <span class="acao-card">
-                    Analisar QR Code →
-                </span>
-
-            </a>
-
-        </section>
+            </section>
 
 
-        <!-- DIFERENCIAIS -->
-        <section class="diferenciais">
+            <section class="lembrete-final">
 
-            <div>
+                <div class="icone-lembrete">
+                    ☎️
+                </div>
 
-                <span class="numero-destaque">
-                    0–100
-                </span>
+                <div>
 
-                <h3>
-                    Score de risco
-                </h3>
+                    <h3>
+                        Ainda está com dúvida?
+                    </h3>
 
-                <p>
-                    Classificação simples para
-                    facilitar a compreensão do risco.
-                </p>
+                    <p>
+                        Entre em contato diretamente com a empresa,
+                        banco ou pessoa pelos canais oficiais.
+                    </p>
 
-            </div>
+                </div>
 
-
-            <div>
-
-                <span class="numero-destaque">
-                    🎯
-                </span>
-
-                <h3>
-                    Identificação
-                </h3>
-
-                <p>
-                    Identifica possíveis categorias
-                    de golpes e engenharia social.
-                </p>
-
-            </div>
-
-
-            <div>
-
-                <span class="numero-destaque">
-                    🧠
-                </span>
-
-                <h3>
-                    Educação digital
-                </h3>
-
-                <p>
-                    Além de analisar, explica quais
-                    sinais levaram ao resultado.
-                </p>
-
-            </div>
+            </section>
 
         </section>
 
@@ -248,12 +287,11 @@
     <footer>
 
         <strong>
-            🛡️ScamCoup
+            🛡️ ScamCoup
         </strong>
 
         <p>
-            Projeto acadêmico de prevenção e
-            conscientização contra golpes digitais.
+            Uma ajuda simples para reconhecer possíveis golpes digitais.
         </p>
 
     </footer>
