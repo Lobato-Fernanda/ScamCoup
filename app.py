@@ -95,7 +95,7 @@ def analisar_mensagem(mensagem):
         ),
 
         (
-            ["banco", "receita federal", "correios", "gov.br"],
+            ["banco", "receita federal", "correios", "gov.br", "receita"],
             10,
             "A mensagem menciona uma instituição conhecida."
         )
